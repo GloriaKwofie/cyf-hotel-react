@@ -9,7 +9,11 @@ function TouristInfoCards() {
           className="card-img-top"
         />
         <div className="card-body">
-          <a href="peoplemakeglasgow.com" className="btn btn-primary">
+          <a
+            href="peoplemakeglasgow.com"
+            target="_blank"
+            className="btn btn-primary"
+          >
             Go somewhere
           </a>
         </div>
@@ -21,7 +25,11 @@ function TouristInfoCards() {
           className="card-img-top"
         />
         <div className="card-body">
-          <a href="visitmanchester.com" className="btn btn-primary">
+          <a
+            href="visitmanchester.com"
+            target="_blank"
+            className="btn btn-primary"
+          >
             Go somewhere
           </a>
         </div>
@@ -33,7 +41,7 @@ function TouristInfoCards() {
           className="card-img-top"
         />
         <div className="card-body">
-          <a href="visitlondon.com" className="btn btn-primary">
+          <a href="visitlondon.com" target="_blank" className="btn btn-primary">
             Go somewhere
           </a>
         </div>
