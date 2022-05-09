@@ -1,4 +1,8 @@
 import React from "react";
+import fakeBookings from "../data/fakeBookings";
+//import moment from 'moment'
+
+console.log(fakeBookings);
 
 const SearchResults = () => {
   return (
@@ -16,24 +20,23 @@ const SearchResults = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>steve</td>
-          <td>Okran</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
+        {fakeBookings.map(booking => {
+          //const checkIn = moment(booking.checkInDate)
+          //const checkOut = moment(booking.checkOutDate)
+          //const nightCalculation = checkOut.diff(checkIn, "days")
+          return (
+            <tr>
+              <td>{booking.id}</td>
+              <td>{booking.title}</td>
+              <td>{booking.firstName}</td>
+              <td>{booking.surname}</td>
+              <td>{booking.email}</td>
+              <td>{booking.roomId}</td>
+              <td>{booking.checkInDate}</td>
+              <td>{booking.checkOutDate}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
