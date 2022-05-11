@@ -1,6 +1,6 @@
 import React from "react";
 import fakeBookings from "../data/fakeBookings";
-//import moment from 'moment'
+import moment from "moment";
 
 console.log(fakeBookings);
 
@@ -17,13 +17,14 @@ const SearchResults = () => {
           <th scope="col">Room Id</th>
           <th scope="col">Check In Date</th>
           <th scope="col">Check Out Date</th>
+          <th scope="col">Nights</th>
         </tr>
       </thead>
       <tbody>
         {fakeBookings.map(booking => {
-          //const checkIn = moment(booking.checkInDate)
-          //const checkOut = moment(booking.checkOutDate)
-          //const nightCalculation = checkOut.diff(checkIn, "days")
+          const checkIn = moment(booking.checkInDate);
+          const checkOut = moment(booking.checkOutDate);
+          const nightCalculation = checkOut.diff(checkIn, "days");
           return (
             <tr>
               <td>{booking.id}</td>
@@ -34,6 +35,7 @@ const SearchResults = () => {
               <td>{booking.roomId}</td>
               <td>{booking.checkInDate}</td>
               <td>{booking.checkOutDate}</td>
+              <td>{nightCalculation}</td>
             </tr>
           );
         })}
