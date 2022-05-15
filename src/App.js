@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 
 import Bookings from "./components/Bookings";
 import "./App.css";
+import Restaurant from "./components/Restaurant";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Heading />
       <TouristInfoCards />
       <Bookings />
+      <Restaurant />
       <Footer
         footerInfo={[
           "123 Fake Street, London, E1 4UD",

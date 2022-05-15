@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import fakeBookings from "../data/fakeBookings";
-import moment from "moment";
+import Row from "./Row";
 
 console.log(fakeBookings);
 
@@ -22,22 +22,7 @@ const SearchResults = () => {
       </thead>
       <tbody>
         {fakeBookings.map(booking => {
-          const checkIn = moment(booking.checkInDate);
-          const checkOut = moment(booking.checkOutDate);
-          const nightCalculation = checkOut.diff(checkIn, "days");
-          return (
-            <tr>
-              <td>{booking.id}</td>
-              <td>{booking.title}</td>
-              <td>{booking.firstName}</td>
-              <td>{booking.surname}</td>
-              <td>{booking.email}</td>
-              <td>{booking.roomId}</td>
-              <td>{booking.checkInDate}</td>
-              <td>{booking.checkOutDate}</td>
-              <td>{nightCalculation}</td>
-            </tr>
-          );
+          return <Row booking={booking} />;
         })}
       </tbody>
     </table>
