@@ -20,7 +20,7 @@
 
 .header {
   display: flex;
-  background-color: black;
+  background-color: rgb(33, 31, 31);
 }
 
 .header img {
@@ -67,6 +67,10 @@ tr {
 
 .card img {
   height: 230px;
+}
+
+.App-header {
+  justify-content: center;
 }
 
 .cities {
